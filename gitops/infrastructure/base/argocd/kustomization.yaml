@@ -2,6 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - namespace.yaml
-  # Upstream ArgoCD install manifest — pinned to a specific version.
-  # To upgrade: update the version tag and run `flux reconcile kustomization infrastructure`.
-  - https://raw.githubusercontent.com/argoproj/argo-cd/v2.14.4/manifests/install.yaml
+  # Upstream ArgoCD install manifest — vendored at v2.14.4.
+  # Flux's kustomize-controller blocks remote bases, so this file is committed directly.
+  # To upgrade: re-download from https://github.com/argoproj/argo-cd/releases and replace this file.
+  - install.yaml

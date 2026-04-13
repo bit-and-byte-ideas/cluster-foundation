@@ -41,8 +41,8 @@ argocd-password: ## Print the initial ArgoCD admin password
 	@kubectl -n argocd get secret argocd-initial-admin-secret \
 		-o jsonpath="{.data.password}" | base64 -d && echo
 
-argocd-port-forward: ## Port-forward ArgoCD UI to localhost:8080
-	kubectl port-forward svc/argocd-server -n argocd 8080:80
+argocd-port-forward: ## Port-forward ArgoCD UI to localhost:9080
+	kubectl port-forward svc/argocd-server -n argocd 9080:80
 
 kubeconfig: ## Print the KUBECONFIG path for the kind cluster
 	@kind get kubeconfig --name $(CLUSTER_NAME)
