@@ -1,0 +1,25 @@
+# Secrets and credentials
+*.kubeconfig
+kubeconfig
+secrets/
+.env
+*.secret.yaml
+*.secret.yml
+*.sops.yaml
+
+# Temporary files
+tmp/
+.tmp/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Editor artifacts
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Flux bootstrap output (managed by flux bootstrap, committed to repo)
+# Intentionally NOT ignored — flux-system/ contents are tracked in git

@@ -1,0 +1,7 @@
+# This directory is created and managed by `flux bootstrap`.
+# Do not manually edit files here — they are overwritten by flux on each bootstrap run.
+#
+# Expected contents after bootstrap:
+#   gotk-components.yaml  — all Flux CRDs and controllers
+#   gotk-sync.yaml        — GitRepository + Kustomization pointing at clusters/local/dev
+#   kustomization.yaml    — plain kustomize entrypoint for the above two files
